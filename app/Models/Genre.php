@@ -14,4 +14,9 @@ class Genre extends Model
     ];
 
     public $timestamps = false;
+
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 }
